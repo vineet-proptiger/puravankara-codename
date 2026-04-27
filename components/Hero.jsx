@@ -19,7 +19,7 @@ const Hero = ({ setIsOpen }) => {
   }, [])
 
   return (
-    <section className="!pt-[82px] !pb-0 relative" style={{ minHeight: 'calc(100vh - 82px)', background: '#0a0a0a' }}>
+    <section className="!pt-[82px] !pb-0 relative" style={{ minHeight: '100svh', background: '#0a0a0a' }}>
 
       {/* ── Full-bleed background carousel ── */}
       <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
@@ -30,7 +30,9 @@ const Hero = ({ setIsOpen }) => {
             transition: 'opacity 1.2s ease',
           }}>
             <Image src={src} alt={`Puravankara Codename Hennur ${idx + 1}`} fill className="object-cover"
-              priority={idx === 0} sizes="100vw" />
+              priority={idx === 0}
+              sizes="(max-width: 768px) 100vw, 100vw"
+              style={{ objectPosition: 'center top' }} />
           </div>
         ))}
         {/* Left-heavy dark overlay */}
@@ -66,7 +68,7 @@ const Hero = ({ setIsOpen }) => {
       <div
         className="relative z-10 container mx-auto px-4 md:px-8"
         style={{
-          minHeight: 'calc(100vh - 82px)',
+          minHeight: 'calc(100svh - 82px)',
           display: 'flex', alignItems: 'center',
           paddingTop: '48px', paddingBottom: '56px',
         }}
@@ -225,9 +227,9 @@ const Hero = ({ setIsOpen }) => {
             </div>
           </div>
 
-          {/* RIGHT — Floating glass card */}
+          {/* RIGHT — Floating glass card (hidden on mobile) */}
           <div
-            className="w-full lg:w-[300px] xl:w-[340px] flex-shrink-0"
+            className="hidden lg:block lg:w-[300px] xl:w-[340px] flex-shrink-0"
             data-aos="fade-left" data-aos-delay="200"
           >
             <div style={{
