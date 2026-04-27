@@ -88,9 +88,9 @@ export default function PrivacyPolicy() {
             {/* Intro */}
             <p className="mb-6 sm:mb-8 text-sm sm:text-base" style={{ lineHeight: 1.8, color: '#444', fontFamily: 'var(--font-jost), Jost, sans-serif' }}>
               At{' '}
-              <Link href="https://marqtardeonewlaunch.in" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-gold-dark)', fontWeight: '600', textDecoration: 'none' }}>
-                marqtardeonewlaunch.in
-              </Link>{' '}
+              <strong style={{ color: 'var(--color-gold-dark)', fontWeight: '600' }}>
+                Puravankara Codename Hennur
+              </strong>{' '}
               (Authorized Marketing Partner), we respect your privacy and are committed to safeguarding your personal data. This Privacy Policy outlines how we collect, use, and protect your information when you visit our website.
             </p>
 
